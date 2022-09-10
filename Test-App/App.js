@@ -27,8 +27,8 @@
 
 
 
-// const fs = require("fs")
+const fs = require("fs")
 
-// const files = fs.readdirSync("./")
+const files = fs.readdirSync("./")
 
-// console.log(files)
+console.log(files)
