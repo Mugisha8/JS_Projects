@@ -32,3 +32,7 @@
 // const files = fs.readdirSync("./")
 
 // console.log(files)
+
+const fs = require("fs")
+
+
