@@ -30,14 +30,14 @@
 
 
 
-const fs = require("fs")
+// const fs = require("fs")
 
-fs.readdir("./",function(err,docs){
+// fs.readdir("./",function(err,docs){
 
-    if(err) console.log("error",err)
-    else console.log("result",docs)
+//     if(err) console.log("error",err)
+//     else console.log("result",docs)
 
-})
+// })
 
 
 
