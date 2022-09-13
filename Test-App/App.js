@@ -22,17 +22,23 @@
 
 // console.log("Total Memory" + TotalMemory + "\n Free memory" + FreeMemory );
 
-
-
-
-
-
 // const fs = require("fs")
 
 // const files = fs.readdirSync("./")
 
 // console.log(files)
 
+
+
 const fs = require("fs")
+
+fs.readdir("./",function(err,docs){
+
+    if(err) console.log("error",err)
+    else console.log("result",docs)
+
+})
+
+
 
 
