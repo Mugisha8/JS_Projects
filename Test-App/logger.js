@@ -1,8 +1,8 @@
-var url = "http://mylogger.io/log";
+// var url = "http://mylogger.io/log";
 
-function log(message) {
+// function log(message) {
 
-  console.log("Mugisha");
+//   console.log("Mugisha");
 
-}
-module.exports = log;
+// }
+// module.exports = log;
