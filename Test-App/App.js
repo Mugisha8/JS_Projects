@@ -15,10 +15,10 @@
 
 // console.log(pathObject)
 
-const os = require("os");
+// const os = require("os");
 
-var TotalMemory = os.totalmem();
-var FreeMemory = os.freemem();
+// var TotalMemory = os.totalmem();
+// var FreeMemory = os.freemem();
 
-console.log("Total Memory" + TotalMemory + "\n Free memory" + FreeMemory );
+// console.log("Total Memory" + TotalMemory + "\n Free memory" + FreeMemory );
 
