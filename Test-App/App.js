@@ -5,6 +5,6 @@
 
 // Myname("Mugisha")
 
-const log = require("./logger");
+// const log = require("./logger");
 
-log("message");
+// log("message");
