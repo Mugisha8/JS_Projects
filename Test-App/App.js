@@ -1,7 +1,10 @@
+// function Myname(name)
+// {
+//     console.log("Hello my name is "+ name);
+// }
 
-function Myname(name)
-{
-    console.log("Hello my name is "+ name);
-}
+// Myname("Mugisha")
 
-Myname("Mugisha")
+const log = require("./logger");
+
+log("message");
