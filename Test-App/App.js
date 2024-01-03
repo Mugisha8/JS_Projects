@@ -53,6 +53,7 @@ const server = http.createServer((req,res)=>{
 
 if(req.url === "MeightIndustries/Restaurant"){
 
+    res.write(JSON.stringify([12,34,56]))
 
 }
 
