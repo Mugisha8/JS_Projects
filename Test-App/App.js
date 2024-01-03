@@ -49,16 +49,11 @@
 
 const http = require("http")
 
-const server = http.createServer((req,res)=>{
+const server = http.createServer();
 
-if(req.url === "/")
-{
-    res.write("This Is Meight Industries");
-    res.end();
-}
-
-});
-
+server.on("connection",(socket)=>{
+    console.log("new connenction...")
+})
 
 server.listen(3000)
 
