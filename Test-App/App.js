@@ -47,17 +47,17 @@
 // emitter.emit("messagelogged",{id:1,url:"//https:meightGroupLtd.rw"});
 
 
-const http = require("http")
+// const http = require("http")
 
-const server = http.createServer();
+// const server = http.createServer();
 
-server.on("connection",(socket)=>{
-    console.log("new connenction...")
-})
+// server.on("connection",(socket)=>{
+//     console.log("new connenction...")
+// })
 
-server.listen(3000)
+// server.listen(3000)
 
-console.log("Listening on port 3000")
+// console.log("Listening on port 3000")
 
 
 
