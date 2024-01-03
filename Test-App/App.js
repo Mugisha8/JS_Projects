@@ -46,27 +46,14 @@
 // });
 // emitter.emit("messagelogged",{id:1,url:"//https:meightGroupLtd.rw"});
 
+// const http = require("http");
 
-const http = require("http")
+// const server = http.createServer((req, res) => {
+//   if (req.url === "MeightIndustries/Restaurant") {
+//     res.write(JSON.stringify([12, 34, 56]));
+//   }
+// });
 
-const server = http.createServer((req,res)=>{
+// server.listen(3000);
 
-if(req.url === "MeightIndustries/Restaurant"){
-
-    res.write(JSON.stringify([12,34,56]))
-
-}
-
-
-});
-
-
-
-server.listen(3000)
-
-console.log("Listening on port 3000")
-
-
-
-
-
+// console.log("Listening on port 3000");
