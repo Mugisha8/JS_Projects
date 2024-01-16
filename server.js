@@ -13,6 +13,10 @@ app.get("/stocks", (req, res) => {
   res.send("meight stocks in Rwanda");
 });
 
+app.post("/apartments", (req, res) => {
+  res.send(req.body);
+});
+
 mongoose
   .connect(
     "mongodb+srv://M8:m12345678@meight.qpbgj6y.mongodb.net/Meight-Server?retryWrites=true&w=majority"
