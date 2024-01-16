@@ -12,3 +12,8 @@ app.get("/", (req, res) => {
 app.get("/stocks", (req, res) => {
   res.send("meight stocks in Rwanda");
 });
+
+mongoose
+  .connect(
+    "mongodb+srv://M8:m12345678@meight.qpbgj6y.mongodb.net/Meight-Server?retryWrites=true&w=majority"
+  )
