@@ -17,3 +17,7 @@ const apartmentsSchema = mongoose.Schema({
 {
   timestamps:true,
 })
+
+const apartments = mongoose.model("apartments",apartmentsSchema);
+
+module.exports=apartments
