@@ -1,5 +1,7 @@
-const express = require("express");
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
+
+import express from "express";
+import apartments from "./Models/ProductModel";
 
 const app = express();
 
@@ -13,9 +15,14 @@ app.get("/stocks", (req, res) => {
   res.send("meight stocks in Rwanda");
 });
 
-app.post("/apartments", (req, res) => {
-  res.send(req.body);
-
+app.post("/apartments", async (req, res) => {
+  try {
+    const apartment = await apartments.create(req.body);
+    res.status(200).json(apartment);
+  } catch (error) {
+    console.log(error.message);
+    res.status(500).json({ message: error.message });
+  }
 });
 
 mongoose
