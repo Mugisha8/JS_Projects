@@ -15,6 +15,7 @@ app.get("/stocks", (req, res) => {
 
 app.post("/apartments", (req, res) => {
   res.send(req.body);
+
 });
 
 mongoose
