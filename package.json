@@ -1,5 +1,5 @@
 {
-  "type":"module",
+  "type": "module",
   "name": "js_projects",
   "version": "1.0.0",
   "description": "",
@@ -16,6 +16,7 @@
     "@babel/core": "^7.23.7",
     "@babel/runtime": "^7.23.8",
     "Babel": "^0.0.1",
+    "dotenv": "^16.3.1",
     "express": "^4.18.2",
     "mongoose": "^8.1.0",
     "nodemon": "^3.0.2"

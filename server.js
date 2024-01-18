@@ -1,15 +1,24 @@
+//imports
 import mongoose from "mongoose";
-
+import dotenv from "dotenv";
 import express from "express";
 import apartments from "./Models/ProductModel.js";
 
+//end of imports
 const app = express();
+
+//start of env configuration
+dotenv.config();
+
+const MONGO_URL = process.env.MONGO_URL;
+const PORT = process.env.PORT || 8000
+
+//end of env configuration
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-//routes
-
+// start routes
 app.get("/", (req, res) => {
   res.send("Meight Rwanda ");
 });
@@ -61,9 +70,8 @@ app.put("/apartments/:id", async (req, res) => {
     if (!apartment) {
       res.status(404).json({ message: `Apartment not updated` });
     }
-    const updatApartment = await apartments.findById(id)
+    const updatApartment = await apartments.findById(id);
     res.status(200).json(updatApartment);
-
   } catch (error) {
     console.log(error.message);
     res.status(500).json({ message: error.message });
@@ -79,6 +87,7 @@ app.delete("/apartments/:id", async (req, res) => {
         .status(404)
         .json({ message: `Apartment of the ID: ${id} is not found.` });
     }
+
     res.status(200).json(apartment);
   } catch (error) {
     console.log(error.message);
@@ -86,18 +95,22 @@ app.delete("/apartments/:id", async (req, res) => {
   }
 });
 
+// end of routes
+
+
+//db connection
 mongoose
-  .connect(
-    "mongodb+srv://M8:m12345678@meight.qpbgj6y.mongodb.net/Meight-Server?retryWrites=true&w=majority"
-  )
+  .connect(MONGO_URL)
 
   .then(() => {
     console.log("Database Connected");
-    app.listen(3000, () => {
-      console.log("Starting connection....");
+    app.listen(PORT, () => {
+      console.log(`Starting connection.... on PORT ${PORT} `);
     });
   })
 
   .catch((error) => {
     console.error("failed To connect to the database", error);
   });
+
+//end of db connection
